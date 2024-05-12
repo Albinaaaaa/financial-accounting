@@ -4,4 +4,80 @@
 
 body {
     background-color: #010725;
+    color: white;
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#wrapper {
+    width: 1250px;
+    margin: 0 auto;
+    padding: 50px 15px;
+}
+
+.content {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.description-container {
+    max-width: 450px;
+    font-size: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    margin-right: 15px;
+}
+
+.input {
+    border-radius: 100px;
+    border: 1px solid #010725;
+    color: inherit;
+    background: #010D50;
+}
+
+.input:disabled {
+    opacity: 0.7; /* Adjust opacity as desired */
+    cursor: not-allowed;
+    background-color: #2a3256; /* Adjust background color */
+    color: #999; /* Optional: Change text color for disabled options */
+}
+
+.hide {
+    display: none;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 100% */
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    border-radius: 80px;
+    background: #0328EE;
+    transition: 0.3s background ease-in-out;
+}
+
+.btn:hover {
+    background: #031eb2;
+}
+
+.card {
+    margin-bottom: 25px;
 }

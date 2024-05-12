@@ -1,17 +1,57 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.app')
+@section('main-content')
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>{{ $chart1->options['chart_title'] }}</h1>
+                        {!! $chart1->renderHtml() !!}
+                        {!! $chart1->renderChartJsLibrary() !!}
+                        {!! $chart1->renderJs() !!}
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+                        <hr/>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h1>{{ $chart2->options['chart_title'] }}</h1>
+                        {!! $chart2->renderHtml() !!}
+                        {!! $chart2->renderChartJsLibrary() !!}
+                        {!! $chart2->renderJs() !!}
+
+                        <hr/>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h1>{{ $chart3->options['chart_title'] }}</h1>
+                        {!! $chart3->renderHtml() !!}
+                        {!! $chart3->renderChartJsLibrary() !!}
+                        {!! $chart3->renderJs() !!}
+
+                        <hr/>
+                    </div>
+                </div>
+
+{{--                        <h1>{{ $chart2->options['chart_title'] }}</h1>--}}
+{{--                        {!! $chart2->renderHtml() !!}--}}
+
+{{--                        <hr/>--}}
+
+{{--                        <h1>{{ $chart3->options['chart_title'] }}</h1>--}}
+{{--                        {!! $chart3->renderHtml() !!}--}}
+
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
+
+{{--@section('javascript')--}}
+
+{{--    {!! $chart2->renderJs() !!}--}}
+{{--    {!! $chart3->renderJs() !!}--}}
+{{--@endsection--}}
