@@ -64,6 +64,22 @@
                 ],
                 'sort' => 'currency_id' // To sort rows. Have to set if an attribute is not defined for column.
             ],
+            [
+            'label' => 'Actions', // Optional
+            'class' => Itstructure\GridView\Columns\ActionColumn::class, // Required
+            'actionTypes' => [ // Required
+                [
+                    'class' => Itstructure\GridView\Actions\Delete::class, // Required
+                    'url' => function ($data) { // Optional
+                        return '/data/' . $data->id . '/delete';
+                    },
+                    'htmlAttributes' => [ // Optional
+                        'style' => 'color: yellow; font-size: 16px;',
+                        'onclick' => 'return window.confirm("Are you sure you want to delete?");'
+                    ]
+                ]
+            ]
+        ]
              ]
     ]) !!}
 @endsection

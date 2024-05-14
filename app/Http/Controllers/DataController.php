@@ -127,4 +127,11 @@ class DataController extends Controller
         $additionalTypes = Data::getAdditionalTypesByTypeId($id);
         return response()->json(['additionalTypes' => $additionalTypes]);
     }
+
+    public function delete($data)
+    {
+        Data::destroy($data);
+        return redirect(RouteServiceProvider::HOME);
+
+    }
 }

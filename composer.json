@@ -12,6 +12,7 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "laraveldaily/laravel-charts": "^0.2.3",
+        "phpunit/phpunit": "^10.5",
         "spatie/laravel-html": "^3.7"
     },
     "require-dev": {

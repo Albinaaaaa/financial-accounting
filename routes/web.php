@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function () {
 //Route::resource('/data', DataController::class);
 Route::get('data', [DataController::class, 'view'])->name('data.index');
 Route::get('/data/create', [DataController::class, 'create'])->name('data.create');
+Route::get('/data/{id}/delete', [DataController::class, 'delete']);
 Route::get('/data/get-additional-types/{id}', [DataController::class, 'actionGetAdditionalTypes']);
 // laravel-grid-view не поддерживает метод DELETE
 //Route::get('/quick-link/{id}/destroy', [QuickLinkController::class, 'destroy'])->name('quick-link.destroy');

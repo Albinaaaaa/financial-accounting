@@ -121,7 +121,7 @@ class Data extends Model
                     ? $amount * self::USD_TO_UAH_VALUE
                     : $amount / self::USD_TO_UAH_VALUE;
             case self::EURO_ID:
-                return $type == 'show'
+                return $type == 'save'
                     ? $amount * self::EURO_TO_UAH_VALUE
                     : $amount / self::EURO_TO_UAH_VALUE;
             default:
